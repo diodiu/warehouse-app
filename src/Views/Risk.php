@@ -4,10 +4,12 @@ function my_autoload ($pClassName) {
     include(__DIR__ . "/../" . $pClassName . ".php");
 }
 spl_autoload_register("my_autoload");
-session_start();
 
 use Controller\AppController;
+use Model\AnswerModel;
 use Model\RiskModel;
+
+session_start();
 
 $appController = new AppController();
 $view = $appController->accidentSequences();
@@ -24,7 +26,7 @@ $view = $appController->accidentSequences();
         <li><a class="btn btn-primary" href="ProtectionZones.php">Zone de protectie</a></li>
     </ul>
 
-    <form action="Measure.php" method="POST">
+    <form action="" method="POST">
         <table class="table table-hover">
             <?php
                 echo $view->printRiskHeaders();
@@ -49,5 +51,14 @@ if(isset($_POST['add'])) {
         $riskAnswers[] = new RiskModel($no, false);
     }
 
-    $_SESSION['riskAnswers'] = $riskAnswers;
+    $answerModel = (new AnswerModel())
+        ->setRiskAnswers($riskAnswers);
+    $_SESSION['answerModel'] = $answerModel;
+
+    echo "
+        <script type='text/javascript'>
+            window.location.href = 'Measure.php'
+        </script>
+    ";
 }
+?>

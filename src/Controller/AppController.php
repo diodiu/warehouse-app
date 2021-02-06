@@ -15,6 +15,9 @@ class AppController
     private const MEASURES = '../files/masuri_organizatorice.csv';
     private const TECHNIQUES = '../files/tehnici_aplicate.csv';
 
+    /**
+     * @return AccidentSequenceModel
+     */
     public function accidentSequences(): AccidentSequenceModel
     {
         $riskFile = $this->getRisks();

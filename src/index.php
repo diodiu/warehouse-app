@@ -1,15 +1,3 @@
-<?php
-function my_autoload ($pClassName) {
-    $pClassName = str_replace('\\', '/', $pClassName);
-    include(__DIR__ . "/" . $pClassName . ".php");
-}
-spl_autoload_register("my_autoload");
-
-use Controller\AppController;
-
-$appController = new AppController();
-?>
-
 <html lang="ro">
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">

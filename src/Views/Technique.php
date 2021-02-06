@@ -4,10 +4,12 @@ function my_autoload ($pClassName) {
     include(__DIR__ . "/../" . $pClassName . ".php");
 }
 spl_autoload_register("my_autoload");
-session_start();
 
 use Controller\AppController;
+use Model\AnswerModel;
 use Model\TechniqueModel;
+
+session_start();
 
 $appController = new AppController();
 $view = $appController->accidentSequences();
@@ -50,5 +52,15 @@ if(isset($_POST['add'])) {
         $techniqueAnswers[] = new TechniqueModel($no, false);
     }
 
-    $_SESSION['techniqueAnswers'] = $techniqueAnswers;
+    /** @var AnswerModel $answerModel */
+    $answerModel = $_SESSION['answerModel'];
+    $answerModel->setTechniqueAnswers($techniqueAnswers);
+
+    $_SESSION['answerModel'] = $answerModel;
+
+    echo "
+        <script type='text/javascript'>
+            window.location.href = 'AccidentSequencesResult.php'
+        </script>
+    ";
 }
