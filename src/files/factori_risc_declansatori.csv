@@ -1,0 +1,16 @@
+﻿Simbol,Descriere
+D1,Explozivi incompatibili
+D2,Accident de autovehicul in incinta depozitului
+D3,Accident aviatic
+D4,Cutremur
+D5,Explozii in vecinatate
+D6,Explozivi sensibili la impact
+D7,Explozivi sensibili la frecare
+D8,"Supratensiuni atmosferice, fulgere"
+D9,Scantei provenite din functionarea defectuoasa a echipamentelor electrice
+D10,Scantei datorate electricitatii statice
+D11,Explozivi instabili chimic
+D12,Impuritati in compozitia explozivilor
+D13,Dispozitive electroexplozive
+D14,Incendii in exterior
+D15,Incendii in interior
