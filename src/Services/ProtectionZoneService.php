@@ -49,7 +49,7 @@ class ProtectionZoneService
      *
      * @return CsvRowQuantity
      */
-    private function getZones(int $quantity): CsvRowQuantity
+    public function getZones(int $quantity): CsvRowQuantity
     {
         $csvReader = new CsvReader();
         $file = $csvReader->readQuantity();

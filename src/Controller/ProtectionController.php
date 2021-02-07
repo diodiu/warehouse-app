@@ -2,6 +2,7 @@
 
 namespace Controller;
 
+use Model\CsvRowQuantity;
 use Services\ProtectionZoneService;
 
 /**
@@ -19,5 +20,17 @@ class ProtectionController
         $service = new ProtectionZoneService();
 
         return $service->printZones($quantity);
+    }
+
+    /**
+     * @param int $quantity
+     *
+     * @return CsvRowQuantity
+     */
+    public function getZoneRow(int $quantity): CsvRowQuantity
+    {
+        $service = new ProtectionZoneService();
+
+        return $service->getZones($quantity);
     }
 }
