@@ -4,10 +4,10 @@
         <title>Warehouse</title>
     </head>
 <body>
-    <ul class="nav nav-tabs">
-        <li><a class="btn btn-primary" href="../index.php">Acasa</a></li>
-        <li><a class="btn btn-primary" href="Risk.php">Secvente de accident</a></li>
-        <li class="active"><a class="btn btn-primary" href="ProtectionZones.php">Zone de protectie</a></li>
+    <ul class="nav nav-tabs justify-content-center">
+        <li class="ml-3"><a class="btn btn-primary" href="../index.php">Acasa</a></li>
+        <li class="ml-3"><a class="btn btn-primary" href="Risk.php">Secvente de accident</a></li>
+        <li class="active ml-3"><a class="btn btn-primary" href="ProtectionZones.php">Zone de protectie</a></li>
     </ul>
 </body>
 </html>

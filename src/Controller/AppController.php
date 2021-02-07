@@ -4,7 +4,9 @@ namespace Controller;
 
 use files\Files;
 use Model\AccidentSequenceModel;
+use Model\AnswerModel;
 use Model\CsvModel;
+use Services\AccidentResultService;
 use Services\CsvReader;
 
 /**
@@ -25,19 +27,28 @@ class AppController
     }
 
     /**
-     * @param array $risks
+     * @param AnswerModel $answerModel
+     * @param CsvModel    $file
+     *
+     * @return string
+     */
+    public function printAnswer(AnswerModel $answerModel, CsvModel $file): string
+    {
+        $service = new AccidentResultService($answerModel);
+
+        return $service->printResults($file);
+    }
+
+    /**
+     * @param AnswerModel $answerModel
      *
      * @return CsvModel[]
      */
-    public function getEventsTree(array $risks): array
+    public function getRiskFiles(AnswerModel $answerModel): array
     {
-        $csvReader = new CsvReader();
-        $tree = [];
-        foreach ($risks as $risk) {
-            $tree[] = $csvReader->read(Files::getTreeFile($risk));
-        }
+        $service = new AccidentResultService($answerModel);
 
-        return $tree;
+        return $service->getRiskFiles();
     }
 
     /**
