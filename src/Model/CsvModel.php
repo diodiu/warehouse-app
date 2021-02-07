@@ -13,7 +13,7 @@ class CsvModel
     private $headers;
 
     /**
-     * @var CsvRow[]
+     * @var CsvRow[]|CsvRowQuantity[]
      */
     private $rows;
 
@@ -30,9 +30,9 @@ class CsvModel
     /**
      * Adds a row.
      *
-     * @param CsvRow $row
+     * @param CsvRow|CsvRowQuantity $row
      */
-    public function addRow(CsvRow $row)
+    public function addRow(object $row)
     {
         $this->rows[] = $row;
     }
@@ -50,7 +50,7 @@ class CsvModel
     /**
      * Rows getter.
      *
-     * @return CsvRow[]
+     * @return CsvRow[]|CsvRowQuantity[]
      */
     public function getRows(): array
     {

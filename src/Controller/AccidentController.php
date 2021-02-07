@@ -10,9 +10,9 @@ use Services\AccidentResultService;
 use Services\CsvReader;
 
 /**
- * Class AppController
+ * Class AccidentController
  */
-class AppController
+class AccidentController
 {
     /**
      * @return AccidentSequenceModel

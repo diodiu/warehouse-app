@@ -11,6 +11,7 @@ final class Files
     public const RISK = '../Files/factori_risc_declansatori.csv';
     public const MEASURES = '../Files/masuri_organizatorice.csv';
     public const TECHNIQUES = '../Files/tehnici_aplicate.csv';
+    public const QUANTITIES = '../Files/cantitati_explozibil.csv';
 
     // Events tree
     private const D1 = '../Files/EventsTree/D1.csv';

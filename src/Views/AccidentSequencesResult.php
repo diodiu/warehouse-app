@@ -5,13 +5,13 @@ function my_autoload ($pClassName) {
 }
 spl_autoload_register("my_autoload");
 
-use Controller\AppController;
+use Controller\AccidentController;
 use files\Files;
 use Model\AnswerModel;
 
 session_start();
 
-$appController = new AppController();
+$appController = new AccidentController();
 /** @var AnswerModel $answerModel */
 $answerModel = $_SESSION['answerModel'];
 ?>

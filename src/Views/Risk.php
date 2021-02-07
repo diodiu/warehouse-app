@@ -5,13 +5,13 @@ function my_autoload ($pClassName) {
 }
 spl_autoload_register("my_autoload");
 
-use Controller\AppController;
+use Controller\AccidentController;
 use Model\AnswerModel;
 use Model\RiskModel;
 
 session_start();
 
-$appController = new AppController();
+$appController = new AccidentController();
 $view = $appController->accidentSequences();
 ?>
 <html lang="ro">
