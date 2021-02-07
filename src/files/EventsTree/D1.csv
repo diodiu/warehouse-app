@@ -1,0 +1,12 @@
+﻿Simbol,Descriere
+D1,*O2e*O1e*O12e*T2e*T9e*T3e*T1e*T24e
+D1,*O2e*O1e* O12e *T2e*T9e*T3e*T1e*T24r
+D1,*O2e*O1e* O12e *T2e*T9e*T3e*T1r*T24r
+D1,*O2e*O1e* O12e *T2e*T9e*T3e*T1r
+D1,*O2e*O1e* O12e **T2e*T9e*T3r*T1r*T24r
+D1,*O2e*O1e *O12e **T2e*T9e*T3r*T1r
+D1,*O2e*O1e* O12e *T2e*T9e*T3r
+D1,*O2e*O1e* O12e *T2e*T9r
+D1,*O2e*O1e* O12e *T2r*T9r
+D1,*O2e*O1e*T2r
+D1,*O2r*O1r*T2r

@@ -18,6 +18,11 @@ class CsvRow
     private $description;
 
     /**
+     * @var bool
+     */
+    private $exists = false;
+
+    /**
      * Symbol getter.
      *
      * @return string|null
@@ -61,6 +66,30 @@ class CsvRow
     public function setDescription(?string $description): CsvRow
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Exists getter.
+     *
+     * @return bool|null
+     */
+    public function isExists(): ?bool
+    {
+        return $this->exists;
+    }
+
+    /**
+     * Exists setter.
+     *
+     * @param bool|null $exists
+     *
+     * @return $this
+     */
+    public function setExists(?bool $exists): CsvRow
+    {
+        $this->exists = $exists;
 
         return $this;
     }

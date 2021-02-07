@@ -93,4 +93,49 @@ class AnswerModel
 
         return $this;
     }
+
+    /**
+     * @return array
+     */
+    public function getRisksSymbols(): array
+    {
+        $symbols = [];
+        foreach ($this->riskAnswers as $riskAnswer) {
+            if ($riskAnswer->getAnswer()) {
+                $symbols[] = sprintf('D%d', $riskAnswer->getId());
+            }
+        }
+
+        return $symbols;
+    }
+
+    /**
+     * @return array
+     */
+    public function getMeasuresSymbols(): array
+    {
+        $symbols = [];
+        foreach ($this->measureAnswers as $measureAnswer) {
+            if ($measureAnswer->getAnswer()) {
+                $symbols[] = sprintf('O%d', $measureAnswer->getId());
+            }
+        }
+
+        return $symbols;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTechniquesSymbols(): array
+    {
+        $symbols = [];
+        foreach ($this->techniqueAnswers as $techniqueAnswer) {
+            if ($techniqueAnswer->getAnswer()) {
+                $symbols[] = sprintf('T%d', $techniqueAnswer->getId());
+            }
+        }
+
+        return $symbols;
+    }
 }

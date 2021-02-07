@@ -30,13 +30,11 @@ class CsvModel
     /**
      * Adds a row.
      *
-     * @param array $row
+     * @param CsvRow $row
      */
-    public function addRow(array $row)
+    public function addRow(CsvRow $row)
     {
-        $this->rows[] = (new CsvRow())
-            ->setSymbol($row[0])
-            ->setDescription($row[1]);
+        $this->rows[] = $row;
     }
 
     /**

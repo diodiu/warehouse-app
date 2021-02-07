@@ -3,6 +3,7 @@
 namespace Services;
 
 use Model\CsvModel;
+use Model\CsvRow;
 
 /**
  * Class CsvReader
@@ -21,15 +22,18 @@ class CsvReader
     public function read(string $filename): CsvModel
     {
         $csvModel = new CsvModel();
-        $row = 0;
+        $rowCount = 0;
         if ($handle = fopen($filename, self::READ)) {
             while ($data = fgetcsv($handle)) {
-                if ($row === 0) {
+                if ($rowCount === 0) {
                     $csvModel->setHeaders($data);
                 } else {
-                    $csvModel->addRow($data);
+                    $row = new CsvRow();
+                    $row->setSymbol($data[0])
+                        ->setDescription($data[1]);
+                    $csvModel->addRow($row);
                 }
-                $row++;
+                $rowCount++;
             }
             fclose($handle);
         }

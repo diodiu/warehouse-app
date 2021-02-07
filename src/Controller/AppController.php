@@ -2,6 +2,7 @@
 
 namespace Controller;
 
+use files\Files;
 use Model\AccidentSequenceModel;
 use Model\CsvModel;
 use Services\CsvReader;
@@ -11,10 +12,6 @@ use Services\CsvReader;
  */
 class AppController
 {
-    private const RISK = '../files/factori_risc_declansatori.csv';
-    private const MEASURES = '../files/masuri_organizatorice.csv';
-    private const TECHNIQUES = '../files/tehnici_aplicate.csv';
-
     /**
      * @return AccidentSequenceModel
      */
@@ -28,6 +25,22 @@ class AppController
     }
 
     /**
+     * @param array $risks
+     *
+     * @return CsvModel[]
+     */
+    public function getEventsTree(array $risks): array
+    {
+        $csvReader = new CsvReader();
+        $tree = [];
+        foreach ($risks as $risk) {
+            $tree[] = $csvReader->read(Files::getTreeFile($risk));
+        }
+
+        return $tree;
+    }
+
+    /**
      * Returns the Risk file content.
      *
      * @return CsvModel
@@ -36,7 +49,7 @@ class AppController
     {
         $csvReader = new CsvReader();
 
-        return $csvReader->read(self::RISK);
+        return $csvReader->read(Files::RISK);
     }
 
     /**
@@ -48,7 +61,7 @@ class AppController
     {
         $csvReader = new CsvReader();
 
-        return $csvReader->read(self::MEASURES);
+        return $csvReader->read(Files::MEASURES);
     }
 
     /**
@@ -60,6 +73,6 @@ class AppController
     {
         $csvReader = new CsvReader();
 
-        return $csvReader->read(self::TECHNIQUES);
+        return $csvReader->read(Files::TECHNIQUES);
     }
 }
