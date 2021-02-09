@@ -27,7 +27,7 @@ class AnswerModel
      *
      * @return RiskModel[]|null
      */
-    public function getRiskAnswers(): ?array
+    public function getRiskAnswers()
     {
         return $this->riskAnswers;
     }
@@ -39,7 +39,7 @@ class AnswerModel
      *
      * @return $this
      */
-    public function setRiskAnswers(?array $riskAnswers): AnswerModel
+    public function setRiskAnswers($riskAnswers)
     {
         $this->riskAnswers = $riskAnswers;
 
@@ -51,7 +51,7 @@ class AnswerModel
      *
      * @return MeasureModel[]|null
      */
-    public function getMeasureAnswers(): ?array
+    public function getMeasureAnswers()
     {
         return $this->measureAnswers;
     }
@@ -63,7 +63,7 @@ class AnswerModel
      *
      * @return $this
      */
-    public function setMeasureAnswers(?array $measureAnswers): AnswerModel
+    public function setMeasureAnswers($measureAnswers)
     {
         $this->measureAnswers = $measureAnswers;
 
@@ -75,7 +75,7 @@ class AnswerModel
      *
      * @return TechniqueModel[]|null
      */
-    public function getTechniqueAnswers(): ?array
+    public function getTechniqueAnswers()
     {
         return $this->techniqueAnswers;
     }
@@ -87,7 +87,7 @@ class AnswerModel
      *
      * @return $this
      */
-    public function setTechniqueAnswers(?array $techniqueAnswers): AnswerModel
+    public function setTechniqueAnswers($techniqueAnswers)
     {
         $this->techniqueAnswers = $techniqueAnswers;
 
@@ -97,7 +97,7 @@ class AnswerModel
     /**
      * @return array
      */
-    public function getRisksSymbols(): array
+    public function getRisksSymbols()
     {
         $symbols = [];
         foreach ($this->riskAnswers as $riskAnswer) {
@@ -112,7 +112,7 @@ class AnswerModel
     /**
      * @return array
      */
-    public function getMeasuresSymbols(): array
+    public function getMeasuresSymbols()
     {
         $symbols = [];
         foreach ($this->measureAnswers as $measureAnswer) {
@@ -127,7 +127,7 @@ class AnswerModel
     /**
      * @return array
      */
-    public function getTechniquesSymbols(): array
+    public function getTechniquesSymbols()
     {
         $symbols = [];
         foreach ($this->techniqueAnswers as $techniqueAnswer) {

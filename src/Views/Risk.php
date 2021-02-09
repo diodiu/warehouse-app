@@ -40,8 +40,8 @@ $view = $appController->accidentSequences();
 
 <?php
 if(isset($_POST['add'])) {
-    $yeses = $_POST['yes'] ?? [];
-    $nos = $_POST['no'] ?? [];
+    $yeses = $_POST['yes'] ? $_POST['yes'] : [];
+    $nos = $_POST['no'] ? $_POST['no'] : [];
     $riskAnswers = [];
 
     foreach ($yeses as $yes) {

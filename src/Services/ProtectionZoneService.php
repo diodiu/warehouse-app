@@ -14,7 +14,7 @@ class ProtectionZoneService
      *
      * @return string
      */
-    public function printZones(int $quantity): string
+    public function printZones($quantity)
     {
         $row = $this->getZones($quantity);
 
@@ -40,7 +40,7 @@ class ProtectionZoneService
             $row->getZone1(),
             $row->getZone2(),
             $row->getZone3(),
-            $row->getZone4(),
+            $row->getZone4()
         );
     }
 
@@ -49,7 +49,7 @@ class ProtectionZoneService
      *
      * @return CsvRowQuantity
      */
-    public function getZones(int $quantity): CsvRowQuantity
+    public function getZones($quantity)
     {
         $csvReader = new CsvReader();
         $file = $csvReader->readQuantity();

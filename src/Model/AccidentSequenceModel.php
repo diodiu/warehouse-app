@@ -39,7 +39,7 @@ class AccidentSequenceModel
     /**
      * @return string
      */
-    public function printTechniqueHeaders(): string
+    public function printTechniqueHeaders()
     {
         return $this->printHeaders($this->techniqueFile->getHeaders());
     }
@@ -47,7 +47,7 @@ class AccidentSequenceModel
     /**
      * @return string
      */
-    public function printTechniqueRows(): string
+    public function printTechniqueRows()
     {
         return $this->printRows($this->techniqueFile->getRows());
     }
@@ -55,7 +55,7 @@ class AccidentSequenceModel
     /**
      * @return string
      */
-    public function printMeasureHeaders(): string
+    public function printMeasureHeaders()
     {
         return $this->printHeaders($this->measureFile->getHeaders());
     }
@@ -63,7 +63,7 @@ class AccidentSequenceModel
     /**
      * @return string
      */
-    public function printMeasureRows(): string
+    public function printMeasureRows()
     {
         return $this->printRows($this->measureFile->getRows());
     }
@@ -71,7 +71,7 @@ class AccidentSequenceModel
     /**
      * @return string
      */
-    public function printRiskHeaders(): string
+    public function printRiskHeaders()
     {
         return $this->printHeaders($this->riskFile->getHeaders());
     }
@@ -79,7 +79,7 @@ class AccidentSequenceModel
     /**
      * @return string
      */
-    public function printRiskRows(): string
+    public function printRiskRows()
     {
         return $this->printRows($this->riskFile->getRows());
     }

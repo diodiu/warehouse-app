@@ -22,7 +22,7 @@ class CsvRow
      *
      * @return string|null
      */
-    public function getSymbol(): ?string
+    public function getSymbol()
     {
         return $this->symbol;
     }
@@ -34,7 +34,7 @@ class CsvRow
      *
      * @return $this
      */
-    public function setSymbol(?string $symbol): CsvRow
+    public function setSymbol($symbol)
     {
         $this->symbol = $symbol;
 
@@ -46,7 +46,7 @@ class CsvRow
      *
      * @return string|null
      */
-    public function getDescription(): ?string
+    public function getDescription()
     {
         return $this->description;
     }
@@ -58,7 +58,7 @@ class CsvRow
      *
      * @return $this
      */
-    public function setDescription(?string $description): CsvRow
+    public function setDescription($description)
     {
         $this->description = $description;
 

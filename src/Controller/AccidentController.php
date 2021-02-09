@@ -17,7 +17,7 @@ class AccidentController
     /**
      * @return AccidentSequenceModel
      */
-    public function accidentSequences(): AccidentSequenceModel
+    public function accidentSequences()
     {
         $riskFile = $this->getRisks();
         $measureFile = $this->getMeasures();
@@ -32,7 +32,7 @@ class AccidentController
      *
      * @return string
      */
-    public function printAnswer(AnswerModel $answerModel, CsvModel $file): string
+    public function printAnswer(AnswerModel $answerModel, CsvModel $file)
     {
         $service = new AccidentResultService($answerModel);
 
@@ -44,7 +44,7 @@ class AccidentController
      *
      * @return CsvModel[]
      */
-    public function getRiskFiles(AnswerModel $answerModel): array
+    public function getRiskFiles(AnswerModel $answerModel)
     {
         $service = new AccidentResultService($answerModel);
 
@@ -56,7 +56,7 @@ class AccidentController
      *
      * @return CsvModel
      */
-    private function getRisks(): CsvModel
+    private function getRisks()
     {
         $csvReader = new CsvReader();
 
@@ -68,7 +68,7 @@ class AccidentController
      *
      * @return CsvModel
      */
-    private function getMeasures(): CsvModel
+    private function getMeasures()
     {
         $csvReader = new CsvReader();
 
@@ -80,7 +80,7 @@ class AccidentController
      *
      * @return CsvModel
      */
-    private function getTechniques(): CsvModel
+    private function getTechniques()
     {
         $csvReader = new CsvReader();
 

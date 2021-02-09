@@ -22,7 +22,7 @@ class CsvModel
      *
      * @param array|null $headers
      */
-    public function setHeaders(array $headers)
+    public function setHeaders($headers)
     {
         $this->headers = $headers;
     }
@@ -32,7 +32,7 @@ class CsvModel
      *
      * @param CsvRow|CsvRowQuantity $row
      */
-    public function addRow(object $row)
+    public function addRow($row)
     {
         $this->rows[] = $row;
     }
@@ -42,7 +42,7 @@ class CsvModel
      *
      * @return array
      */
-    public function getHeaders(): array
+    public function getHeaders()
     {
         return $this->headers;
     }
@@ -52,7 +52,7 @@ class CsvModel
      *
      * @return CsvRow[]|CsvRowQuantity[]
      */
-    public function getRows(): array
+    public function getRows()
     {
         return $this->rows;
     }

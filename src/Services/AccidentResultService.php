@@ -42,7 +42,7 @@ class AccidentResultService
      *
      * @return string
      */
-    public function printResults(CsvModel $file): string
+    public function printResults(CsvModel $file)
     {
         $table = '';
         foreach ($file->getRows() as $row) {
@@ -78,7 +78,7 @@ class AccidentResultService
     /**
      * @return CsvModel[]
      */
-    public function getRiskFiles(): array
+    public function getRiskFiles()
     {
         if (!isset($this->riskTreeFiles)) {
             foreach ($this->answerModel->getRisksSymbols() as $risk) {

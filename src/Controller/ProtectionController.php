@@ -15,7 +15,7 @@ class ProtectionController
      *
      * @return string
      */
-    public function printZones(int $quantity): string
+    public function printZones($quantity)
     {
         $service = new ProtectionZoneService();
 
@@ -27,7 +27,7 @@ class ProtectionController
      *
      * @return CsvRowQuantity
      */
-    public function getZoneRow(int $quantity): CsvRowQuantity
+    public function getZoneRow($quantity)
     {
         $service = new ProtectionZoneService();
 

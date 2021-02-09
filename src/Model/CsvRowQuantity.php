@@ -37,7 +37,7 @@ class CsvRowQuantity
      *
      * @return int|null
      */
-    public function getQuantity(): ?int
+    public function getQuantity()
     {
         return $this->quantity;
     }
@@ -49,7 +49,7 @@ class CsvRowQuantity
      *
      * @return $this
      */
-    public function setQuantity(?int $quantity): CsvRowQuantity
+    public function setQuantity($quantity)
     {
         $this->quantity = $quantity;
 
@@ -61,7 +61,7 @@ class CsvRowQuantity
      *
      * @return int|null
      */
-    public function getZone1(): ?int
+    public function getZone1()
     {
         return $this->zone1;
     }
@@ -73,7 +73,7 @@ class CsvRowQuantity
      *
      * @return $this
      */
-    public function setZone1(?int $zone1): CsvRowQuantity
+    public function setZone1($zone1)
     {
         $this->zone1 = $zone1;
 
@@ -85,7 +85,7 @@ class CsvRowQuantity
      *
      * @return int|null
      */
-    public function getZone2(): ?int
+    public function getZone2()
     {
         return $this->zone2;
     }
@@ -97,7 +97,7 @@ class CsvRowQuantity
      *
      * @return $this
      */
-    public function setZone2(?int $zone2): CsvRowQuantity
+    public function setZone2($zone2)
     {
         $this->zone2 = $zone2;
 
@@ -109,7 +109,7 @@ class CsvRowQuantity
      *
      * @return int|null
      */
-    public function getZone3(): ?int
+    public function getZone3()
     {
         return $this->zone3;
     }
@@ -121,7 +121,7 @@ class CsvRowQuantity
      *
      * @return $this
      */
-    public function setZone3(?int $zone3): CsvRowQuantity
+    public function setZone3($zone3)
     {
         $this->zone3 = $zone3;
 
@@ -133,7 +133,7 @@ class CsvRowQuantity
      *
      * @return int|null
      */
-    public function getZone4(): ?int
+    public function getZone4()
     {
         return $this->zone4;
     }
@@ -145,7 +145,7 @@ class CsvRowQuantity
      *
      * @return $this
      */
-    public function setZone4(?int $zone4): CsvRowQuantity
+    public function setZone4($zone4)
     {
         $this->zone4 = $zone4;
 

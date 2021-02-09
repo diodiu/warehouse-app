@@ -23,7 +23,7 @@ abstract class AbstractAnswerModel
      * @param int  $id
      * @param bool $answer
      */
-    public function __construct(int $id, bool $answer)
+    public function __construct($id, $answer)
     {
         $this->id = $id;
         $this->answer = $answer;
@@ -34,7 +34,7 @@ abstract class AbstractAnswerModel
      *
      * @return int|null
      */
-    public function getId(): ?int
+    public function getId()
     {
         return $this->id;
     }
@@ -44,7 +44,7 @@ abstract class AbstractAnswerModel
      *
      * @return bool|null
      */
-    public function getAnswer(): ?bool
+    public function getAnswer()
     {
         return $this->answer;
     }

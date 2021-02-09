@@ -12,7 +12,7 @@ use Model\CsvRowQuantity;
  */
 class CsvReader
 {
-    private const READ = 'r';
+    const READ = 'r';
 
     /**
      * Reads the given csv file.
@@ -21,7 +21,7 @@ class CsvReader
      *
      * @return CsvModel
      */
-    public function read(string $filename): CsvModel
+    public function read($filename)
     {
         $csvModel = new CsvModel();
         $rowCount = 0;
@@ -48,7 +48,7 @@ class CsvReader
      *
      * @return CsvModel
      */
-    public function readQuantity(): CsvModel
+    public function readQuantity()
     {
         $csvModel = new CsvModel();
         $rowCount = 0;
