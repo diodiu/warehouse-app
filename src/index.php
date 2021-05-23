@@ -2,7 +2,7 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
-        <title>Warehouse</title>
+        <title>RESICEX</title>
     </head>
 <body style="background-color: #ab3428">
     <ul class="nav nav-tabs justify-content-center">
