@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Monoton");
+.logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Monoton", Helvetica, sans-serif;
+    letter-spacing: 5px;
+}
+
+h1 {
+    display: inline;
+    font-size: 15vw;
+    text-transform: uppercase;
+    color: #f49e4c;
+}
+@media (min-width: 700px) {
+    h1 {
+        font-size: 9vw;
+    }
+}
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 150px;
+    }
+}
+
+@supports (-webkit-background-clip: text) {
+    h1 {
+        color: transparent;
+        background: linear-gradient(7deg, #f5ee9e 50%, #f49e4c 0);
+        -webkit-background-clip: text;
+    }
+}
